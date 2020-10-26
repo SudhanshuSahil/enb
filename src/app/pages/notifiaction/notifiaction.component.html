@@ -1,0 +1,74 @@
+<div class="page-header" data-parallax="true" style="background-image: url('assets/img/notif.jpg'); min-height: 65vh;">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>Notifications</h1>
+            <br />
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto">
+                <h2 class="title">Notifications from Startups</h2>
+                <!-- <div class="col-md-6 mr-auto ml-auto">
+                    <hr/>
+                </div> -->
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div *ngFor="let post of posts" class="row">
+            <div class="col-md-8 mr-auto ml-auto">
+                
+                <img src="{{post.images}}" style="background: black; height: 100px; width: 100px; border-radius: 50%;"/>
+            
+                <h4 *ngIf="post.website_url" class="title">
+                    <a href="{{post.website_url}}" target="__blank">
+                        {{post.name}}
+                    </a>
+                </h4>
+                <h4 *ngIf="!post.website_url" class="title">
+                        {{post.name}}
+                </h4>
+            
+                <p class="description">
+                    {{post.description}}
+                </p>
+                <br />
+                <a (click)="openDialog(post)" class="btn btn-round btn-primary text-white">Contact</a>
+                <a *ngIf="post.website_url" href="{{post.website_url}}" class="btn btn-round btn-secondary text-white">Website Link</a>
+                <br />
+                <br />
+
+                <div class="col-md-6 mr-auto ml-auto">
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto">
+                <h2 class="title">Publish your notification</h2>
+                <h5 class="description">
+                    To publish your notification, Please add your message here ( It will be posted after review )
+                </h5>
+                <br>
+                <a (click)="newDialog()" class="btn btn-primary btn-round text-white">Add your Message</a>
+            </div>
+        </div>
+        <br/>
+        <!-- <hr /> -->
+    </div>
+</div>

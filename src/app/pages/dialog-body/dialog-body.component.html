@@ -1,0 +1,28 @@
+<a (click)="close()">
+    <p style="float: right; cursor: pointer; font-size: large; color: #777777;">X</p>
+</a>
+<h2 style="margin-top: -6px;"><a *ngIf="startup.linkedin_link" target="__blank" href="{{startup.linkedin_link}}">
+    {{startup.name }}
+</a>
+<div *ngIf="!startup.linkedin_link">
+    {{startup.name }}
+</div> 
+</h2>
+
+<br>
+<h4>Details of Startup:</h4>
+<br>
+<p *ngIf="startup.detail_of_ideas" > {{ startup.detail_of_ideas }}</p>
+<p *ngIf="!startup.detail_of_ideas"> No Details Availaible</p>
+
+<br>
+<h4>Funding Stastics:</h4>
+<br>
+<p *ngIf="startup.detail_of_ideas" > {{ startup.funding }}</p>
+<p *ngIf="!startup.detail_of_ideas"> No Funding Stastics Availaible</p>
+
+<br>
+<h4>Contact Details:</h4>
+<br>
+<p>Email: <a href="mailto:{{startup.email}}" target="__blank"> <b>{{startup.email}}</b></a></p>
+<p>Contact: <a href="tel:{{startup.contact}}" target="__blank"><b>{{startup.contact}}</b></a></p>

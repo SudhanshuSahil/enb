@@ -1,0 +1,103 @@
+
+<div class="section landing-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mr-auto ml-auto" >
+                <h2 class="text-center">Keep in touch?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row" style="padding-top: 25px;"> 
+                    <div class="col-md-6">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#avatar"><img src="https://ecell.in/fincof/assets/img/Shubhanshi.png" alt="Shubhanshu Ducati" style="padding: 5px;"></a>
+                            </div>
+                            <div class="card-block">
+                                <a href="mailto:shubhanshi@ecell.in">
+                                    <div class="author">
+                                        <h4 class="card-title">Shubhanshi Asati</h4>
+                                        <h6 class="card-category text-danger">Events Head</h6>
+                                        <p style="color: black;">shubhanshi@ecell.in</p>
+                                        <p style="color: black;"><a href="https://api.whatsapp.com/send?phone=917667557469" style="color: black;">7667557469</a></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-profile card-plain">
+                            <div class="card-avatar">
+                                <a href="#avatar"><img src="https://ecell.in/fincof/assets/img/Sudhanshu.png" alt="sudhanshu" style="padding: 5px;"></a>
+                            </div>
+                            <div class="card-block">
+                                <a href="mailto:sudhanshu@ecell.in">
+                                    <div class="author">
+                                        <h4 class="card-title">Sudhanshu Sahil</h4>
+                                        <h6 class="card-category text-danger">Technical Head</h6>
+                                        <p style="color: black;">sudhanshu@ecell.in</p>
+                                        <p style="color: black;"><a href="https://api.whatsapp.com/send?phone=917667557469" style="color: black;">7667557469</a></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <form class="contact-form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Name</label>
+                            <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                                </div>
+                                <input [(ngModel)]="name" name="w" type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Email</label>
+                            <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                </div>
+                                <input [(ngModel)]="email" name="email" type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                            </div>
+                        </div>
+                    </div>
+                    <label>Message</label>
+                    <textarea [(ngModel)]="message" name="qaqq" class="form-control" rows="4" placeholder="Your Feedback"></textarea>
+                    <div class="row">
+                        <div class="col-md-4 mr-auto ml-auto">
+                            <button (click)="sendFeedback()" class="btn btn-danger btn-lg btn-fill">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a target="_blank" href="https://ecell.in/2020/">E-Cell Home</a></li>
+                    <li><a target="_blank" href="https://instagram.com/enb_club_iitb">Instagram</a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/enbclub/">Facebook</a></li>
+                   
+                </ul>
+            </nav>
+            <div class="credits ml-auto">
+                <span class="copyright">
+                    © {{test | date: 'yyyy'}}, made and maintained by Te | E-Cell                </span>
+            </div>
+        </div>
+    </div>
+</footer>

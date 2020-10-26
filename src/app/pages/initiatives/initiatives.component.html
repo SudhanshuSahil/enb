@@ -1,0 +1,287 @@
+<div class="page-header" data-parallax="true" style="background-image: url('assets/img/init.jpg'); min-height: 65vh;">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>Initiatives</h1>
+            <h4>List of everything EnB</h4>
+            <br />
+            <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Watch video</a> -->
+            <!-- <button type="button" (click)="loginDialog()" class="btn btn-outline-neutral btn-round">Login as Investor</button> -->
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <h2 class="title">Our Initiatives</h2>
+        <br><br>
+        <div class="row">
+            <ng-container *ngFor="let initiative of initiatives index as i" >
+                <div *ngIf="i%6 == 0" class="col-md-5">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{initiative.images}}" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="i%6 == 1" class="col-md-7">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{initiative.images}}" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="i%6 == 2" class="col-md-7">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{initiative.images}}" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="i%6 == 3" class="col-md-5">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{initiative.images}}" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="i%6 == 4" class="col-md-6">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/img/soroush-karimi.jpg" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="i%6 == 5" class="col-md-6">
+                    <div class="card">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{initiative.images}}" style="filter: brightness(50%);" alt="Random first slide">
+                                <div class="text-over-img" style="top: 10px;">
+                                    <h5 style="font-weight: 800">EnB</h5>
+                                    <h2 style="margin-top: 0px;">{{initiative.name}}</h2>
+                                    <br>
+                                    <p class="scrollbar-hide" style="text-overflow: ellipsis;  max-height: 160px; scrollbar-width: none;  overflow-x: hidden; overflow-y: scroll;">
+                                        
+                                        {{initiative.description}}
+                                    </p>
+                                </div>
+                                <div class="carousel-caption">
+                                    <a href="{{initiative.link}}" style="margin-right: 5px;">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-link"></i> Link
+                                        </button>
+                                    </a>
+                                    <a href="{{initiative.link}}" style="margin-left: 5px;">
+                                        <button class="btn btn-secondary btn-round">
+                                            <i class="fa fa-book"></i> Read more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <br/><br/>
+    </div>
+</div>
+
+<!-- 
+<div class="section section-dark text-center">
+    <div class="container">
+        <h2 class="title">Meet Us</h2>
+        <div class="row">
+
+
+            <div class="col-md-4">
+                <div class="card card-profile card-plain">
+                    <div class="card-avatar">
+                        <a href="#avatar"><img style="background-color: white;" src="https://www.ecell.in/2020/images/E-Cell%20Logo-Black.png" alt="..."></a>
+                    </div>
+                    <br>
+                    <div class="card-block">
+                        <a href="#paper-kit">
+                            <div class="author">
+                                <h4 class="card-title">Initiative Name</h4>
+                                <h6 class="card-category">Parent Initiative</h6>
+                            </div>
+                        </a>
+                        <p class="card-description text-center">
+                        Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
+                        </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button href="#pablo" class="btn btn-link"><i class="fa fa-link"></i> Link</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-profile card-plain">
+                    <div class="card-avatar">
+                        <a href="#avatar"><img src="./assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
+                    </div>
+                    <div class="card-block">
+                        <a href="#paper-kit">
+                            <div class="author">
+                                <h4 class="card-title">Sophie West</h4>
+                                <h6 class="card-category">Designer</h6>
+                            </div>
+                        </a>
+                        <p class="card-description text-center">
+                        A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                        </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-profile card-plain">
+                    <div class="card-avatar">
+                        <a href="#avatar"><img src="./assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
+                    </div>
+                    <div class="card-block">
+                        <a href="#paper-kit">
+                            <div class="author">
+                                <h4 class="card-title">Robert Orben</h4>
+                                <h6 class="card-category">Developer</h6>
+                            </div>
+                        </a>
+                        <p class="card-description text-center">
+                        The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                        </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a>
+                        <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

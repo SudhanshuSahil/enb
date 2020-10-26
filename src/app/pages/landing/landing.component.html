@@ -1,0 +1,83 @@
+<div class="page-header" data-parallax="true" style="background-image: url('assets/img/image.png');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center" style="z-index: 2;">
+            <h1>IIT Bombay Startup Portal</h1>
+            <h3>Brought to you by <strong>The Entrepreneurship Cell</strong></h3>
+            <br />
+            <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Watch video</a> -->
+            <!-- <button type="button" (click)="loginDialog()" class="btn btn-outline-neutral btn-round">Login as Investor</button> -->
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mr-auto ml-auto">
+                <h2 class="title">Aim and Vision</h2>
+                <h5 style="font-weight: 500;" class="description">
+                    A platform to provide visibility to all the current student startups of IIT Bombay amongst the Angel Investors and Venture Capitalist Network. It is a go-to place for all our IITB initiatives and events and a forum to post all your public queries, internship offers and requests that you want to be circulated amongst the students.
+                </h5>
+                <br>
+                <a (click)="loginDialog()" class="btn text-white btn-danger btn-round">Notifications access</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div>
+    <div class="section text-center" style="padding-top: 0px;">
+    <div class="container">
+        <h2 class="title">List of Startups from the IIT Bombay</h2>
+        <br><br>
+        <div class="row" style="overflow-x: scroll;">
+            <table class="table">
+                <thead class="text-secondary" style="background: #EEEEEE;">
+                    <th>Startup Name</th>
+                    <th>Founder Name</th>
+                    <th>Stage</th>
+                    <th>Description</th>
+                    <!-- <th>Linkedin</th> -->
+                    <th *ngIf="loggedIn">Details</th>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let startup of startups index as i">
+                        <tr *ngIf="i%2 == 0">
+                            <td style="font-weight: 500;">
+                                <a *ngIf="startup.linkedin_link" href="{{startup.linkedin_link}}">
+                                    {{ startup.name }}
+                                </a>
+                                <div *ngIf="!startup.linkedin_link">
+                                    {{ startup.name }}
+                                </div>
+                            </td>
+                            <td style="font-weight: 500;">{{ startup.founder_name }}</td>
+                            <td style="font-weight: 500;">{{ startup.stage }}</td>
+                            <td style="font-weight: 500;">{{ startup.description }}</td>
+                            <!-- <td>{{ startup.linkedin_link }}</td> -->
+                            <td *ngIf="loggedIn"><a (click)="openDialog(startup)" class="btn btn-secondary text-white btn-round">Details</a></td>
+                        </tr>
+                        <tr *ngIf="i%2 == 1" style="background: #FAFAFA;">
+                            <td style="font-weight: 500;">
+                                <a *ngIf="startup.linkedin_link" href="{{startup.linkedin_link}}">
+                                    {{ startup.name }}
+                                </a>
+                                <div *ngIf="!startup.linkedin_link">
+                                    {{ startup.name }}
+                                </div>
+                            </td>
+                            <td style="font-weight: 500;">{{ startup.founder_name }}</td>
+                            <td style="font-weight: 500;">{{ startup.stage }}</td>
+                            <td style="font-weight: 500;">{{ startup.description }}</td>
+                            <!-- <td>{{ startup.linkedin_link }}</td> -->
+                            <td style="font-weight: 500;" *ngIf="loggedIn"><a (click)="openDialog(startup)" class="btn btn-secondary text-white btn-round">Details</a></td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

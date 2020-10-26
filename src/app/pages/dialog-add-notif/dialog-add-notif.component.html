@@ -1,0 +1,59 @@
+<div style="z-index: 100;" class="">
+    <h3 class="title">Add Notification</h3>
+    <div class="register-form">
+        <label>Startup</label>
+        <br />
+        <small>Name *</small>
+        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+            <input required [(ngModel)]="company_name" type="text" class="form-control" placeholder="Startup Name" (focus)="focus=true" (blur)="focus=false" >
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <small>Website URL</small>
+                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                    <input [(ngModel)]="url" type="url"  class="form-control" placeholder="website url" (focus)="focus1=true" (blur)="focus1=false" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <small>Logo *</small>
+                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                    <input required name="file" id="file"  type="file" (change)="onFileChanged($event)" class="form-control" placeholder="Number" (focus)="focus1=true" (blur)="focus1=false" >
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <label>Message *</label>
+        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+            <input required aria-rowcount="5" [(ngModel)]="message" type="text" class="form-control" placeholder="Message" (focus)="focus1=true" (blur)="focus1=false" >
+        </div>
+
+        <br>
+        <label>Point of Contact</label>
+        <br>
+        <small>Name *</small>
+        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+            <input required [(ngModel)]="name" type="text" class="form-control" placeholder="Name" (focus)="focus1=true" (blur)="focus1=false" >
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <small>E-Mail *</small>
+                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                    <input required [(ngModel)]="email" type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <small>Phone Number *</small>
+                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                    <input required [(ngModel)]="phno" type="number" class="form-control" placeholder="Number" (focus)="focus1=true" (blur)="focus1=false" >
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <input (click)="submit()" type="submit" value="Submit for Review" class="btn btn-secondary btn-block btn-round" />
+    </div>
+</div>

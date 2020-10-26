@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="">IITB Startups | EnB Club | E-Cell</a>
+            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-link">
+                    <a href="" class="nav-link" rel="tooltip" title="Logout as Investor" data-placement="bottom">
+                        <p  style="cursor: pointer;" class="data-toggle">Home</p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="initiatives" class="nav-link" rel="tooltip" title="Logout as Investor" data-placement="bottom">
+                        <p  style="cursor: pointer;" class="data-toggle">Initiatives</p>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="notifications" class="nav-link" rel="tooltip" title="Logout as Investor" data-placement="bottom">
+                        <p  style="cursor: pointer;" class="data-toggle">Notification</p>
+                    </a>
+                </li>
+                <li *ngIf="!loggedIn" class="nav-link">
+                    <a (click)="loginDialog()" class="nav-link" rel="tooltip" title="Login as Investor" data-placement="bottom" target="_blank">
+                        <p  style="cursor: pointer;" class="data-toggle">Login As Investor</p>
+                    </a>
+                </li>
+                <li *ngIf="loggedIn" class="nav-link">
+                    <a (click)="logout()" class="nav-link" rel="tooltip" title="Logout as Investor" data-placement="bottom" target="_blank">
+                        <p  style="cursor: pointer;" class="data-toggle">Logout As Investor</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
